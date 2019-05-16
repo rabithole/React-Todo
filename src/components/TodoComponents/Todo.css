@@ -5,14 +5,25 @@ body {
 
 input {
 	width: 500px;
-	/*height: 100px;*/
-	/*overflow-wrap: break-word;*/
+	height: 20px;
+	background-color: pink;
+	border-radius: 5px;
 }
 
-h2 {
+#outerDiv {
 	margin-top: 50%;
 }
 
-button {
+#addTodo {
 	margin-top: 2%;
+	background-color: palegreen;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#clear {
+	margin-top: 2%;
+	background-color: lightblue;
+	padding: 5px 10px;
+	border-radius: 5px;
 }

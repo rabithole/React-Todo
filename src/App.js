@@ -9,15 +9,22 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-
+      task: '',
+      Id: null,
+      completed: false
     };
+  }
+
+  addTodoEvent = event => {
+    // alert('click event registered');
+    this.setState({ task: event.target.value });
   }
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
-        <TodoForm />
+      <div id='outerDiv'>
+        <h3>Task: {this.state.task}</h3>
+        <TodoForm addTodoEvent={this.addTodoEvent} />
       </div>
     );
   }
