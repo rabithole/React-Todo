@@ -18,9 +18,6 @@ const todos = [
 ];
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
   constructor(props) {
     super(props);
     this.state = {
@@ -28,17 +25,25 @@ class App extends React.Component {
     };
   }
 
-  addTodoEvent = event => {
-    // alert('click event registered');
-    this.setState({ task: event.target.value });
-  }
+  addTask = item => {
+    const newTask = {
+      task: item,
+      id: Date.now(),
+      completed: false
+    };
+    this.setState({
+      todos: [...this.state.todos, newTask]
+    });
+    console.log(newTask);
+  };
 
   render() {
     return (
       <div id='outerDiv'>
         <h3>Do These Things</h3>
+        
+        <TodoForm addTask={this.addTask} />
         <TodoList todos={this.state.todos} />
-        <TodoForm addTodoEvent={this.addTodoEvent} />
       </div>
     );
   }
