@@ -8,6 +8,10 @@ class TodoForm extends React.Component {
 		};
 	}
 
+	handleChange = e => {
+    	this.setState({ [e.target.name]: e.target.value });
+  	};
+
 	submitTask = e => {
 		// alert('yup');
 	    e.preventDefault();
@@ -21,9 +25,10 @@ class TodoForm extends React.Component {
 				<form name='todoItem'> 
 					<input 
 						type='text' 
-						value={this.state.task}
+						value={this.state.item}
 						name='task' 
 						placeholder='Add your todo here' 
+						onChange={this.handleChange}
 
 						/>
 					<br/>
