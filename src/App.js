@@ -5,20 +5,20 @@ import TodoForm from './components/TodoComponents/TodoForm';
 // import todo from './components/TodoComponents/Todo';
 import TodoList from './components/TodoComponents/TodoList';
 
-const todos = [
-  {
-    task: 'sleep',
-    id: 1,
-    completed: false
-  },
-  {
-    task: 'ride',
-    id: 2,
-    completed: false
-  }
-];
+// const todos = [
+//   {
+//     task: 'sleep',
+//     id: 1,
+//     completed: false
+//   },
+//   {
+//     task: 'ride',
+//     id: 2,
+//     completed: false
+//   }
+// ];
 
-// const todos = [];
+const todos = [];
 
 class App extends React.Component {
   constructor(props) {
@@ -28,8 +28,8 @@ class App extends React.Component {
     };
   }
 
-  toggleItem = itemid => {
-    console.log("itemid: ", itemid);
+  toggleItem = (itemid, completed) => {
+    console.log( itemid, completed);
     this.setState({
       todos: this.state.todos.map(item => {
         if (itemid === item.id) {

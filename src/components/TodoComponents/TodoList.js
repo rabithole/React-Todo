@@ -12,6 +12,7 @@ const TodoList = props => {
 						taskid={item.id} 
 						task={item.task} 
 						toggleItem={props.toggleItem}
+						completed={item.completed}
 					/>
 				))}
 		</div>
