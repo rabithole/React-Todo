@@ -8,12 +8,12 @@ import TodoList from './components/TodoComponents/TodoList';
 const todos = [
   {
     task: 'sleep',
-    "id": 1,
+    id: 1,
     completed: false
   },
   {
     task: 'ride',
-    "id": 2,
+    id: 2,
     completed: false
   }
 ];
@@ -46,7 +46,7 @@ class App extends React.Component {
   addTask = item => {
     const newTask = {
       task: item,
-      "id": Date.now(),
+      id: Date.now(),
       completed: false
     };
     this.setState({
