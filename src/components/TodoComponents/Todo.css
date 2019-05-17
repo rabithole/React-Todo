@@ -1,13 +1,16 @@
 body {
 	display: flex;
 	justify-content: center;
+	background-color: lightgrey;
 }
 
 input {
 	width: 500px;
-	height: 20px;
+	/*height: 30px;*/
 	background-color: pink;
 	border-radius: 5px;
+	font-size: 1.4em;
+	padding: 5px 5px 5px 20px;
 }
 
 #outerDiv {
@@ -17,13 +20,34 @@ input {
 #addTodo {
 	margin-top: 2%;
 	background-color: palegreen;
-	padding: 5px 10px;
+	padding: 5px 20px;
 	border-radius: 5px;
+	font-size: 1.1em;
 }
 
 #clear {
 	margin-top: 2%;
 	background-color: lightblue;
-	padding: 5px 10px;
+	padding: 5px 20px;
 	border-radius: 5px;
+	font-size: 1.1em;
 }
+
+.item {
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+	padding: 5px 5px 5px 20px;
+	margin: 2%;
+}
+
+.completed {
+	text-decoration: line-through;
+	background-color: lightblue;
+	color: ;
+	/*height: 30px;*/
+	padding: 5px 5px 5px 20px;
+	margin: 2%;
+}
+
