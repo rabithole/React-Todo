@@ -45,6 +45,7 @@ class App extends React.Component {
   };
 
   addTask = item => {
+    // console.log(item);
     const newTask = {
       task: item,
       id: Date.now(),

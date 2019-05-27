@@ -9,6 +9,7 @@ class TodoForm extends React.Component {
 	}
 
 	handleChange = e => {
+		console.log(e.target.value)
     	this.setState({ [e.target.name]: e.target.value });
   	};
 
@@ -17,6 +18,7 @@ class TodoForm extends React.Component {
 	    e.preventDefault();
 	    this.setState({ task: "" });
 	    this.props.addTask(this.state.task);
+	    console.log(this.state.task)
   	};
 
   	clearComplete = e => {
