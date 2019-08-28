@@ -17,6 +17,7 @@ class TodoForm extends React.Component {
 	    e.preventDefault();
 	    this.setState({ task: "" });
 	    this.props.addTask(this.state.task);
+	    console.log(this.state.task)
   	};
 
   	clearComplete = e => {
