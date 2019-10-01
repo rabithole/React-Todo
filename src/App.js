@@ -54,15 +54,16 @@ class App extends React.Component {
     this.setState({
       todos: [...this.state.todos, newTask]
     });
-    console.log(newTask);
+    // console.log(newTask);
   };
 
   clearCompleted = e => {
     // e.preventDefault();
-    console.log(todos)
+    console.log(this.state.todos)
     this.setState({
       todos: this.state.todos.filter(item => !item.completed)
     });
+    console.log('After: ' , this.state.todos)
   };
 
   render() {
