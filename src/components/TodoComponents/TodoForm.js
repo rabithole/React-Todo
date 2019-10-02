@@ -8,10 +8,18 @@ class TodoForm extends React.Component {
 		};
 	}
 
+//----------------------------
+	// e = event which is a synthetic React event. 
+	// Synthetic events are handled by React opposed to the DOM
+	// Events are a series of methods on the event object that are accessable through the DOM or through React in the case of a synthetic event. 
+
 	handleChange = e => {
     	this.setState({ [e.target.name]: e.target.value });
+    	// target is 
+    	// console.log(e.target.value);
   	};
 
+//--------------------------------------
 	submitTask = e => {
 		// alert('yup');
 	    e.preventDefault();
