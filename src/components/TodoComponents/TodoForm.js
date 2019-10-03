@@ -15,17 +15,18 @@ class TodoForm extends React.Component {
 
 	handleChange = e => {
     	this.setState({ [e.target.name]: e.target.value });
-    	// target is 
-    	// console.log(e.target.value);
+    	// target returns the element that created the event. 
+    	// target.name = 
+    	// console.log(e.target.name);
   	};
 
 //--------------------------------------
 	submitTask = e => {
-		// alert('yup');
 	    e.preventDefault();
 	    this.setState({ task: "" });
 	    this.props.addTask(this.state.task);
 	    console.log(this.state.task)
+	    localStorage.setItem('newTask', JSON.stringify(this.state.task))
   	};
 
   	clearComplete = e => {
