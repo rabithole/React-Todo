@@ -25,7 +25,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos
+      todos // If this is not set, the empty list will not render.
     };
   }
 
@@ -55,6 +55,8 @@ class App extends React.Component {
       todos: [...this.state.todos, newTask] // adds the new task to the todos array using the spread operator. 
     });
     // console.log(newTask);
+    // localStorage.setItem('newTask', JSON.stringify(this.state.todos))
+    // console.log(localStorage.getItem('newTask'))
   };
 
   clearCompleted = e => {
@@ -67,6 +69,7 @@ class App extends React.Component {
   };
 
   render() {
+    // console.log(this.state.todos);
     return (
       <div id='outerDiv'>
         <div>
