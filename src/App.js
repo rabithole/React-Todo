@@ -52,7 +52,7 @@ class App extends React.Component {
       completed: false
     };
     this.setState({
-      todos: [...this.state.todos, newTask]
+      todos: [...this.state.todos, newTask] // adds the new task to the todos array using the spread operator. 
     });
     // console.log(newTask);
     // localStorage.setItem('newTask', JSON.stringify(this.state.todos))

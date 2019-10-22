@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 
 class TodoForm extends React.Component {
 	constructor(){
@@ -14,6 +14,7 @@ class TodoForm extends React.Component {
 	// Events are a series of methods on the event object that are accessable through the DOM or through React in the case of a synthetic event. 
 
 	handleChange = e => {
+		// console.log(e.target.value)
     	this.setState({ [e.target.name]: e.target.value });
     	// target returns the element that created the event. 
     	// target.name = 
@@ -25,6 +26,7 @@ class TodoForm extends React.Component {
 	    e.preventDefault();
 	    this.setState({ task: "" });
 	    this.props.addTask(this.state.task);
+	    // console.log(this.state.task)
 	    console.log(this.state.task)
 	    localStorage.setItem('newTask', JSON.stringify(this.state.task))
   	};
