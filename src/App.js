@@ -29,7 +29,7 @@ class App extends React.Component {
     };
   }
 
-  toggleItem = (itemid) => {
+  toggleItem = (itemid) => { // Toggles completed to true or false
     console.log( itemid);
     this.setState({
       todos: this.state.todos.map(item => {
