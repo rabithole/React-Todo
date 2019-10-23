@@ -74,7 +74,10 @@ class App extends React.Component {
       <div id='outerDiv'>
         <div>
           <h1>Things To Do</h1>
-          <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted}/>
+          <TodoForm 
+            addTask={this.addTask} 
+            clearCompleted={this.clearCompleted}
+          />
         </div>
 
         <TodoList 
