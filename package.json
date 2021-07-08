@@ -1,4 +1,5 @@
 {
+  "start": "PORT=3006 react-srcipts start",
   "name": "react-i",
   "version": "0.1.0",
   "private": true,
